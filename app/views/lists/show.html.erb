@@ -1,0 +1,21 @@
+<div clas="container">
+  <h2>This is the list you want to show📜</h2>
+
+  <h4><%= @list.name %></h4>
+
+  <%= link_to "Back to lists🗄", lists_path %>
+
+  <%= link_to "Add bookmark🎀",  new_list_bookmark_path(@list) %>
+
+  <div class="card">
+    <h3>Your bookmarks🗄📕</h3>
+    <p>
+      <% @list.movies.each do |movie| %>
+     <h4> <%= movie.title %></h4>
+      <br>
+      <p><%= movie.overview %></p>
+      <br><br>
+      <% end %>
+    </p>
+  </div>
+</div>
